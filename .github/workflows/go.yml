@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run test
-        run: go test ./...
+        run: go test ./service/...
     
     #
   build:
