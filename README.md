@@ -1,1 +1,1 @@
-# clickhouse-proxy-client
+# clickhouse-JSONEachRow converting to valid json
