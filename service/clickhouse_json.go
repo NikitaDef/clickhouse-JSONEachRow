@@ -26,7 +26,7 @@ func Copy(dst io.Writer, src io.Reader, bufSize int) (written int64, err error) 
 		return int64(wOpen), err
 	}
 	if len(openSquareBracket) != wOpen {
-		return wOpen, io.ErrShortWrite
+		return int64(wOpen), io.ErrShortWrite
 	}
 	
 	written += int64(wOpen)
