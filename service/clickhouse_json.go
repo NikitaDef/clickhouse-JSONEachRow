@@ -38,9 +38,7 @@ func Copy(dst io.Writer, src io.Reader, bufSize int) (written int64, err error) 
 					isNextLine = false
 				}
 				if buf[i] == nextLine && utf8.Valid([]byte{buf[i]}) {
-					// bufTemp = append(bufTemp, buf[i])
 					isNextLine = true
-					// continue
 				}
 				bufTemp = append(bufTemp, buf[i])
 			}
