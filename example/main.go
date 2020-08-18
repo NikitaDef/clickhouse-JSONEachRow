@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/NikitaDef/clickhouse-proxy-client/service"
+	"clickhouse-JSONEachRow"
 	"log"
 	"net/http"
 )
@@ -19,7 +19,7 @@ func getValue(w http.ResponseWriter, r *http.Request) {
 	}
 
 	defer res.Body.Close()
-	_, err = service.Copy(w, res.Body, 300)
+	_, err = clickhouseJSONEachRow.Copy(w, res.Body, 300)
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
 		return
