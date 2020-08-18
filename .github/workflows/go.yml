@@ -23,7 +23,7 @@ jobs:
         fi
 
     - name: run test
-      run: go test ./service/...
+      run: go test ./...
     
   build:
     name: Build
