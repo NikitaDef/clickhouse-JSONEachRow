@@ -1,7 +1,7 @@
 package main
 
 import (
-	"clickhouse-JSONEachRow"
+	"github.com/NikitaDef/clickhouse-JSONEachRow"
 	"log"
 	"net/http"
 )
